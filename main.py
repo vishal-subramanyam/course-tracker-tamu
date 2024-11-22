@@ -7,10 +7,10 @@ import requests
 
 cookies_file = "cookies.pkl"
 count = 0
-section = 501
+section = YOUR_SECTION_NUMBER
 initial_setup = False
-webhook_url = "https://discordapp.com/api/webhooks/1308661226737504338/uSQ-eWBAg705uXduUSFbS0nBPh62JJdTB3jeVJLN2m105PkksjT35q7rnblU-2_Fz38H"
-course_name = "CSCE 314 - Programming Languages"
+webhook_url = YOUR_WEBHOOK_URL
+course_name = YOUR_COURSE_NAME
 
 def save_cookies(driver, file_path):
     with open(file_path, "wb") as file:
@@ -23,7 +23,7 @@ def load_cookies(driver, file_path):
             driver.add_cookie(cookie)
 
 def send_discord_notification(section):
-    user_id = "321289947854143498"
+    user_id = YOUR_USER_ID
     message = {
         "content": f"<@{user_id}> YOUR SECTION IS HERE!!!!!! Section {section} is now available!"
     }
